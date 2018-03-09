@@ -38,5 +38,8 @@ cm<-makeCacheMatrix(matrix(c(1,2,5,3),2,2))
 cm$get() # retrieve the value of the matrix defined above
 cm$getinv() # retrieve the value of the inverse of the matrix, NULL so far
 cm$set(matrix(c(2,4,2,3),2,2)) # redefine the value with a new matrix
+cm$get() # retrieve the value of the matrix defined with cm$set()
 cacheSolve(cm) # the function cacheSolve calculates the inverse for the matrix defined with cm$set
 cm$getinv() # the inverse of the matrix has been cached and cm$getinv() retrieve it directly
+cacheSolve(cm) # Next time we run the function cachesolve with the same "cm" we will get the inverse of the matrix without calculating it
+
